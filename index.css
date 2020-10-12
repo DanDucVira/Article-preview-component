@@ -13,7 +13,9 @@ a {
     color: white;
 }
 
-.container {
+.container {}
+
+.card {
     display: flex;
     flex-direction: row;
     max-width: 750px;
@@ -26,11 +28,6 @@ a {
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
-}
-
-.card {
-    display: flex;
-
 }
 
 .left {
@@ -78,7 +75,7 @@ a {
 }
 
 .user-info {
-    margin-left: 15px;
+    padding-left: 10px;
 }
 
 .btn-container {
@@ -87,7 +84,9 @@ a {
     background: hsl(217, 19%, 35%);
     text-align: center;
     cursor: pointer;
-    margin-left: 200px;
+    position: relative;
+    left: 200px;
+
 
 
 }
@@ -123,6 +122,21 @@ a {
     padding: 0 15px;
 }
 
+.userName {
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+
+}
+
+footer {
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    width: 100%;
+
+
+}
+
 .flex {
     display: flex;
     justify-content: center;
@@ -132,10 +146,80 @@ a {
 
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 
 
+@media screen and (max-width:768px) {
+    .container {
+        width: 500px;
+        font-size: 12px;
+
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 58px rgba(0, 0, 0, 0.3);
+        height: 600px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .left img {
+        max-width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+    }
+
+
+
+    .profil {
+        display: flex;
+
+    }
+
+    .btn-container {
+        position: relative;
+        left: 0;
+        margin-left: 100px;
+
+
+    }
+
+    .btn-container i {
+        position: relative;
+        top: 10px;
+        width: 20px;
+        color: white;
+
+
+    }
+
+
+
+    .share-links {
+        position: absolute;
+        top: 85%;
+        left: 0%;
+        width: 100%;
+        height: 100px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+
+    }
+
+    footer {
+        position: absolute;
+        top: 100%;
+        bottom: 0;
+        width: 100%;
+
+
+    }
 }
